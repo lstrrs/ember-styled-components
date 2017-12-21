@@ -1,17 +1,22 @@
 {
   "name": "ember-styled-components",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
-  "keywords": [
-    "ember-addon"
-  ],
+  "version": "0.0.1",
+  "description":
+    "Visual primitives for the component age. A simple port of styled-components 💅 for Ember",
+  "keywords": ["ember-addon", "ember", "css", "css-in-js", "styled-components"],
   "license": "MIT",
-  "author": "",
+  "author": "Luis Torres",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "bugs": {
+    "url": "https://github.com/Luinova/ember-styled-components/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luinova/ember-styled-components.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember serve",
@@ -21,6 +26,7 @@
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.3",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.17.1",
@@ -38,6 +44,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.17.0",
+    "eslint": "^4.13.1",
     "loader.js": "^4.2.3"
   },
   "engines": {
