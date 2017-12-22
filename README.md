@@ -49,7 +49,7 @@ export default = styled.h1`
 ```
 
 ```handlebars
-{{!-- Use them like any other React component – except they're styled! --}}
+{{!-- Use them like any other Ember component – except they're styled! --}}
 {{#wrapper-component}}
   {{#title-component}}Hello World, this is my first styled component!{{/title-component}}
 {{/wrapper-component}}
