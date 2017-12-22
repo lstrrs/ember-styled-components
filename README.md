@@ -41,7 +41,7 @@ import styled from 'ember-styled-components';
  * Create a title component that renders an <h1> which is
  * centered, palevioletred and sized at 1.5em
  */
-export default = styled.h1`
+export default styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
