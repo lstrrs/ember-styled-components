@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import domAttributes from '../utils/domAttributes';
 
 // TODO: Have this as a util - objectFromMutableCells
 /**
@@ -26,6 +27,10 @@ export default ComponentStyle => {
         // We have to set the bindings otherwise if we are styling a
         // styled component we will get duplicate classes attached to the component
         this.set('classNameBindings', ['_generatedClassName']);
+
+        // HTML elements support some attributes
+        domAttributes[this.tagName] &&
+          this.set('attributeBindings', domAttributes[this.tagName]);
 
         // this.set('rules', [...this.getWithDefault('rules', []), ...rules]);
         this.rules = [...(this.rules || []), ...rules];
