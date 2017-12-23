@@ -20,10 +20,13 @@ export default ComponentStyle => {
     const isHtmlTag = target && typeof target === 'string';
 
     const styledComponent = {
-      classNameBindings: ['_generatedClassName'],
-
       init() {
         this._super(...arguments);
+
+        // We have to set the bindings otherwise if we are styling a
+        // styled component we will get duplicate classes attached to the component
+        this.set('classNameBindings', ['_generatedClassName']);
+
         // this.set('rules', [...this.getWithDefault('rules', []), ...rules]);
         this.rules = [...(this.rules || []), ...rules];
         this.componentStyle = new ComponentStyle(this.rules);
