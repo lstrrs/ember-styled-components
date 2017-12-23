@@ -1,9 +1,14 @@
 {
   "name": "ember-styled-components",
-  "version": "0.0.1",
-  "description":
-    "Visual primitives for the component age. A simple port of styled-components 💅 for Ember",
-  "keywords": ["ember-addon", "ember", "css", "css-in-js", "styled-components"],
+  "version": "0.0.2",
+  "description": "Visual primitives for the component age. A simple port of styled-components 💅 for Ember",
+  "keywords": [
+    "ember-addon",
+    "ember",
+    "css",
+    "css-in-js",
+    "styled-components"
+  ],
   "license": "MIT",
   "author": "Luis Torres",
   "directories": {
