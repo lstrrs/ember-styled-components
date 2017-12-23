@@ -1,3 +1,4 @@
+/* eslint-disable no-undef, no-empty */
 const objectProto = Object.prototype;
 const hasOwnProperty = objectProto.hasOwnProperty;
 const toString = objectProto.toString;
