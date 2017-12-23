@@ -12,9 +12,15 @@
   <strong>Visual primitives for the component age. A simple port of styled-components 💅 for Ember</strong>
 </div>
 
-# ember-styled-components
+Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS allows you to write actual CSS code to style your components. It also removes the mapping between components and styles - using components as a low-level styling construct could not be easier!
 
-This README outlines the details of collaborating on this Ember addon.
+*This is, not fully-featured, fork from styled-components made by [Glen Maddern](https://twitter.com/glenmaddern) and [Max Stoiber](https://twitter.com/mxstbr). Thank you for making this possible!*
+
+## Installation
+
+```
+npm install ember-styled-components
+```
 
 ## Example
 
@@ -63,25 +69,30 @@ This is what you'll see in your browser:
   </a>
 </div>
 
-## Installation
+## Contributing
 
-* `git clone <repository-url>` this repository
-* `cd ember-styled-components`
-* `npm install`
+If you want to contribute to `ember-styled-components` please see our [contributing and community guidelines](./CONTRIBUTING.md), they'll help you get set up locally and explain the whole process.
 
-## Running
+Please also note that the repository follows out [Code of Conduct](./CODE_OF_CONDUCT.md), make sure to review and follow it.
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## License
 
-## Running Tests
+Licensed under the MIT License, Copyright © 2017 Luis Torres.
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+See [LICENSE](./LICENSE) for more information.
 
-## Building
+## TODOs
 
-* `ember build`
+- [ ] Tests
+- [ ] Demo website
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+## Acknowledgements
+
+This project builds on a long line of earlier work by clever folks all around the world.
+
+* [Styled Components](https://github.com/styled-components/styled-components/)
+* [Vue Styled Components](https://github.com/styled-components/vue-styled-components/)
+
+## Credits
+
+This document is based on the Styled Components `README.md` layout: https://github.com/styled-components/styled-components/
