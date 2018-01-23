@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import domAttributes from '../utils/domAttributes';
+import css from '../constructors/css';
 
 // TODO: Have this as a util - objectFromMutableCells
 /**
@@ -54,17 +55,34 @@ export default ComponentStyle => {
       },
     };
 
+    let EmberStyledComponent;
+
     // TODO: Allow the spread notation
     if (isHtmlTag) {
       // const comp = Object.assign({}, styledComponent, { tagName: target });
       // return Ember.Component.extend({ tagName: target, ...styledComponent });
       const comp = styledComponent;
       comp.tagName = target;
-      return Ember.Component.extend(comp);
+      EmberStyledComponent = Ember.Component.extend(comp);
     } else {
-      return target.extend(styledComponent);
+      EmberStyledComponent = target.extend(styledComponent);
       // return target.extend({ ...styledComponent });
     }
+
+    EmberStyledComponent.reopenClass({
+      withComponent(tag) {
+        return createStyledComponent(tag, rules);
+      },
+
+      extendStyles(cssRules, ...interpolations) {
+        return createStyledComponent(target, [
+          ...rules,
+          ...css(cssRules, ...interpolations),
+        ]);
+      },
+    });
+
+    return EmberStyledComponent;
   };
 
   return createStyledComponent;
